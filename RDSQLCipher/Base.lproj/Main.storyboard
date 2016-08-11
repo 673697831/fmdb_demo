@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMV-sD-rWD">
+                                <rect key="frame" x="281.5" y="72" width="37" height="30"/>
+                                <state key="normal" title="init"/>
+                                <connections>
+                                    <action selector="insertPeople:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dQ3-Bb-MCw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oQ-yG-dLf">
+                                <rect key="frame" x="270.5" y="147" width="59" height="30"/>
+                                <state key="normal" title="encrypt"/>
+                                <connections>
+                                    <action selector="enDatabase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7JI-hg-HSP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEB-2X-kEF">
+                                <rect key="frame" x="270.5" y="220" width="59" height="30"/>
+                                <state key="normal" title="decrypt"/>
+                                <connections>
+                                    <action selector="deDatabase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wf8-KS-eZc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16w-vj-o0o">
+                                <rect key="frame" x="235.5" y="299" width="129" height="30"/>
+                                <state key="normal" title="change secretKey"/>
+                                <connections>
+                                    <action selector="changeKey:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kl3-on-jeO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFU-ug-K22">
+                                <rect key="frame" x="221.5" y="363" width="157" height="30"/>
+                                <state key="normal" title="query without encrypt"/>
+                                <connections>
+                                    <action selector="query:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bjc-60-hi4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgl-F1-bW6">
+                                <rect key="frame" x="235.5" y="439" width="129" height="30"/>
+                                <state key="normal" title="query with encrypt"/>
+                                <connections>
+                                    <action selector="encryptQuery:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Co-l7-1hv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1oQ-yG-dLf" firstAttribute="leading" secondItem="UMV-sD-rWD" secondAttribute="leading" constant="-11" id="5kp-7e-1Y7"/>
+                            <constraint firstItem="HFU-ug-K22" firstAttribute="leading" secondItem="16w-vj-o0o" secondAttribute="leading" constant="-14" id="7je-Ft-jPm"/>
+                            <constraint firstItem="1oQ-yG-dLf" firstAttribute="top" secondItem="UMV-sD-rWD" secondAttribute="bottom" constant="45" id="9lQ-Ef-MAF"/>
+                            <constraint firstItem="qgl-F1-bW6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Csm-jN-R4N"/>
+                            <constraint firstItem="UMV-sD-rWD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="52" id="HoA-9C-qD1"/>
+                            <constraint firstItem="16w-vj-o0o" firstAttribute="top" secondItem="FEB-2X-kEF" secondAttribute="bottom" constant="49" id="Igb-oO-es3"/>
+                            <constraint firstItem="qgl-F1-bW6" firstAttribute="top" secondItem="HFU-ug-K22" secondAttribute="bottom" constant="46" id="NMf-qg-qFv"/>
+                            <constraint firstItem="16w-vj-o0o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XDK-N3-qQB"/>
+                            <constraint firstItem="FEB-2X-kEF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d7O-E6-pvF"/>
+                            <constraint firstItem="16w-vj-o0o" firstAttribute="leading" secondItem="FEB-2X-kEF" secondAttribute="leading" constant="-35" id="fT9-Fo-fhZ"/>
+                            <constraint firstItem="HFU-ug-K22" firstAttribute="top" secondItem="16w-vj-o0o" secondAttribute="bottom" constant="34" id="hLn-5z-ZWQ"/>
+                            <constraint firstItem="1oQ-yG-dLf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kwD-kP-SZ1"/>
+                            <constraint firstItem="FEB-2X-kEF" firstAttribute="leading" secondItem="1oQ-yG-dLf" secondAttribute="leading" id="ran-aC-KZr"/>
+                            <constraint firstItem="FEB-2X-kEF" firstAttribute="top" secondItem="1oQ-yG-dLf" secondAttribute="bottom" constant="43" id="ru9-nC-16l"/>
+                            <constraint firstItem="UMV-sD-rWD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ta6-sk-a0K"/>
+                            <constraint firstItem="qgl-F1-bW6" firstAttribute="leading" secondItem="HFU-ug-K22" secondAttribute="leading" constant="14" id="u5w-lu-DR4"/>
+                            <constraint firstItem="HFU-ug-K22" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zxt-5J-t7d"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
